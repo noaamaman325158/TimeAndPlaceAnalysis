@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="More modular code.">
-      <change afterPath="$PROJECT_DIR$/mock_sensor_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker_file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tracker_file.txt" afterDir="false" />
+    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="Add some mock and improve the existing code.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,9 +37,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/noaa/Desktop/test_llvm_built_in/Visualization/VayyarHomeTaskNoaaMaman",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -75,12 +78,21 @@
       <option name="project" value="LOCAL" />
       <updated>1708427028141</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add some mock and improve the existing code.">
+      <option name="closed" value="true" />
+      <created>1708430691084</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708430691084</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start implement dome basic functions for the required task." />
     <MESSAGE value="More modular code." />
-    <option name="LAST_COMMIT_MESSAGE" value="More modular code." />
+    <MESSAGE value="Add some mock and improve the existing code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some mock and improve the existing code." />
   </component>
 </project>

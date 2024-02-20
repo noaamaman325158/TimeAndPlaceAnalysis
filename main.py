@@ -1,10 +1,7 @@
 import datetime
 
 # Temporary global variable with the current chair location
-chair_current_location = {
-    'x': [-0.5, 0],
-    'y': [1.8, 2.4]
-}
+
 
 
 def point_in_range(location, point):

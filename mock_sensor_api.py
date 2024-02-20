@@ -3,16 +3,15 @@ from flask import Flask, jsonify
 app = Flask(__name__)
 
 # Mock sensor location
-sensor_location = {
-    'x': 0.7,
-    'y': 0.6,
-    'z': 0.8
+chair_current_location = {
+    'x': [-0.5, 0],
+    'y': [1.8, 2.4]
 }
 
 
 @app.route('/api/sensor/location', methods=['GET'])
 def get_sensor_location():
-    return jsonify(sensor_location)
+    return jsonify(chair_current_location)
 
 
 if __name__ == '__main__':
