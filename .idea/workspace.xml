@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="Remove unnecessary code files.">
-      <change afterPath="$PROJECT_DIR$/app/mock_sensor_api_socket.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="Add some another api for real time system using web socket." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -118,7 +115,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708458619497</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add some another api for real time system using web socket.">
+      <option name="closed" value="true" />
+      <created>1708460582613</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708460582613</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -128,6 +133,7 @@
     <MESSAGE value="The api mock work as expected." />
     <MESSAGE value="Succeed to run the image instructions successfully." />
     <MESSAGE value="Remove unnecessary code files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Remove unnecessary code files." />
+    <MESSAGE value="Add some another api for real time system using web socket." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some another api for real time system using web socket." />
   </component>
 </project>
