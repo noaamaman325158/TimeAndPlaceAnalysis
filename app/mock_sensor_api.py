@@ -23,7 +23,6 @@ def get_current_chair_location():
     if response.status_code == 200:
         return jsonify(response.json())
     else:
-        # Return an error message if the request to the sensor API failed
         return jsonify({'error': 'Failed to retrieve sensor location'}), 500
 
 
