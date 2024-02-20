@@ -1,7 +1,9 @@
-import datetime
+import datetime, re, requests, json
 
 # Temporary global variable with the current chair location
 
+API_URI = "http://127.0.0.1:5000/api/chair/location"
+PATH_LOG_FILE = "tracker_log.log"
 
 
 def point_in_range(location, point):
@@ -23,10 +25,19 @@ def is_in_chair_surface(point, chair_loc):
 
 # Function to get the current chair location
 def get_current_chair_location():
-    return chair_current_location
+    try:
+        response = requests.get(API_URI)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            print(f"Error: {response.status_code} - {response.text}")
+            return None
+
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
 
 
-# Function to parse a log entry and extract relevant information
 def parse_log_entry(log_entry):
     entry_data = {}
     parts = log_entry.split()
@@ -45,61 +56,54 @@ def parse_log_entry(log_entry):
     return entry_data
 
 
-def convert_log_file_data_to_dict(log_file_data):
-    log_data_dict = {}
-
-    for log_entry in log_file_data:
-        if 'endOfFrame' in log_entry:
-            entry_data = parse_log_entry(log_entry)
-            timestamp = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            log_data_dict[timestamp] = entry_data
-
-    return log_data_dict
-
-
 def calculate_total_time_in_chair_surface(log_data, chair_location):
-    total_time_duration = datetime.timedelta()
-    prev_timestamp = None
+    pass
 
-    for timestamp, entry_data in sorted(log_data.items()):
-        if prev_timestamp is not None:
-            time_difference = datetime.datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S') - datetime.datetime.strptime(
-                prev_timestamp, '%Y-%m-%d %H:%M:%S')
 
-            x_value = entry_data['x_value']
-            y_value = entry_data['y_value']
+def parse_log_file(file_path):
+    measurements = []
 
-            if is_in_chair_surface((x_value, y_value), chair_location):
-                total_time_duration += time_difference
+    # Regular expressions to extract relevant data
+    frame_pattern = re.compile(r'Process frame without interrupt: (\d+)')
+    fps_pattern = re.compile(r'\[FPS\] Average last 1 frame FPS=(\d+\.\d+)')
+    target_pattern = re.compile(r'Targets: (\d+)')
+    target_data_pattern = re.compile(r't_id=(\d+) x=([+-]\d+\.\d+) y=([+-]\d+\.\d+) z=([+-]\d+\.\d+)')
 
-        prev_timestamp = timestamp
+    with open(file_path, 'r') as file:
+        measurement = {}
 
-    return total_time_duration
+        for line in file:
+            frame_match = frame_pattern.search(line)
+            fps_match = fps_pattern.search(line)
+            target_match = target_pattern.search(line)
+            target_data_match = target_data_pattern.search(line)
+
+            if frame_match:
+                measurement = {'frame': int(frame_match.group(1))}
+            elif fps_match:
+                measurement['fps'] = float(fps_match.group(1))
+            elif target_match:
+                measurement['targets'] = int(target_match.group(1))
+            elif target_data_match:
+                t_id = int(target_data_match.group(1))
+                x = float(target_data_match.group(2))
+                y = float(target_data_match.group(3))
+                z = float(target_data_match.group(4))
+                measurement[f'target_{t_id}_data'] = {'x': x, 'y': y, 'z': z}
+            elif 'endOfFrame' in line:
+                # End of a measurement, append to the list
+                measurements.append(measurement)
+
+    return measurements
 
 
 def main():
-    log_file_data = [
-        "Process frame without interrupt: 598",
-        "[FPS] Average last 1 frame FPS=10.02",
-        "Targets: 1",
-        "t_id=0 x=+0.6 y=+0.7 z=+0.8",
-        "endOfFrame",
-        "Process frame without interrupt: 599",
-        "[FPS] Average last 1 frame FPS=10.02",
-        "Targets: 1",
-        "t_id=0 x=+0.7 y=+0.7 z=+0.8",
-        "endOfFrame",
-        "Process frame without interrupt: 600",
-        "[FPS] Average last 1 frame FPS=10.07",
-        "Targets: 1",
-        "t_id=0 x=+0.7 y=+0.7 z=+0.8",
-        "endOfFrame"
-    ]
+    log_file_measurement = parse_log_file(PATH_LOG_FILE)
 
-    current_location = get_current_chair_location()
-    log_data_dict = convert_log_file_data_to_dict(log_file_data)
-
-    total_time_in_range_loc = calculate_total_time_in_chair_surface(log_data_dict, current_location)
+    current_location_range_json = get_current_chair_location()
+    current_location_range_dict_str = json.dumps(current_location_range_json)
+    current_location_range_dict = json.loads(current_location_range_dict_str)
+    total_time_in_range_loc = calculate_total_time_in_chair_surface(log_file_measurement, current_location_range_dict)
     print(f'Total time in chair surface: {total_time_in_range_loc}')
 
 
