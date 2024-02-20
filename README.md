@@ -15,7 +15,7 @@ This repository contains Python code for calculating the duration of sitting bas
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/yourusername/sitting-duration-calculator.git
+    git clone git@github.com:noaamaman325158/VayyarHomeTaskNoaaMaman.git
     cd sitting-duration-calculator
     ```
 
@@ -35,16 +35,14 @@ This repository contains Python code for calculating the duration of sitting bas
 3. **Build the Docker Image:**
 
     ```bash
-    docker build -t yourusername/sitting_duration_calculator .
+    docker build -t noaa13092/sitting_duration_calculator .
     ```
 
 4. **Run the Docker Container:**
 
     ```bash
-    docker run -p 4000:80 yourusername/sitting_duration_calculator:latest
+    docker run -p 4000:80 noaa13092/sitting_duration_calculator:latest
     ```
-
-    Replace `yourusername` with your Docker Hub username.
 
 5. **Access the Service:**
 
