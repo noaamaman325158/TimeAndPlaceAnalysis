@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="Add some another api for real time system using web socket." />
+    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="generate some .sh file for auxiliary process that set up the docker con container">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +22,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -123,7 +126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708460582613</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="generate some .sh file for auxiliary process that set up the docker con container">
+      <option name="closed" value="true" />
+      <created>1708461007762</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708461007762</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -134,6 +145,7 @@
     <MESSAGE value="Succeed to run the image instructions successfully." />
     <MESSAGE value="Remove unnecessary code files." />
     <MESSAGE value="Add some another api for real time system using web socket." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some another api for real time system using web socket." />
+    <MESSAGE value="generate some .sh file for auxiliary process that set up the docker con container" />
+    <option name="LAST_COMMIT_MESSAGE" value="generate some .sh file for auxiliary process that set up the docker con container" />
   </component>
 </project>
