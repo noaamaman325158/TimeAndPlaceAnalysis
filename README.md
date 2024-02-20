@@ -1,9 +1,8 @@
-# Mock API Sensor
+# Sitting Duration Calculation
 
 ## Overview
 
-This repository contains the code for a mock API sensor implemented in Python using Flask. The sensor provides simulated data for tracking a person's movement in a room.
-
+This repository contains Python code for calculating the duration of sitting based on the API data from a location sensor. The sensor provides information about a person's movement in a room, and this code processes the data to determine the total time spent in a designated sitting area.
 ## Usage
 
 ### Prerequisites
