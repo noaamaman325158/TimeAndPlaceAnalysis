@@ -2,7 +2,8 @@ import datetime
 import json
 import requests
 
-from Utils.data_operations import parse_log_file, extract_coordinates, wrapper_get_dataframe_from_log
+from Utils.data_operations import parse_log_file, extract_coordinates, wrapper_get_dataframe_from_log, \
+    save_dataframe_to_csv
 from Utils.data_visulization_utils import analyze_movement
 from constants import API_URI, PATH_LOG_FILE, DATA_PROVIDED_TIME, FRAME, FPS, TARGETS, END_OF_FRAME, X, Y
 
@@ -116,6 +117,10 @@ def main():
     # Analyzing and visualizing the data
     x_y = extract_coordinates(log_file_measurement)
     analyze_movement(x_y, current_location_range_dict)
+
+    df = wrapper_get_dataframe_from_log(PATH_LOG_FILE)
+
+    save_dataframe_to_csv(df, "assets/file_name")
 
 
 if __name__ == '__main__':

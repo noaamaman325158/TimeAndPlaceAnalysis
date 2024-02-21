@@ -1,14 +1,27 @@
+import numpy as np
+
 from src.constants import DATA_PROVIDED_TIME
 import matplotlib.pyplot as plt
 
 
+def calculate_jerk(acceleration, dt):
+    """
+    Calculate the jerk from acceleration data.
+
+    Parameters:
+    acceleration (list): List of acceleration values.
+    dt (float): Time interval between data points.
+
+    Returns:
+    list: Calculated jerk values.
+    """
+    return np.diff(acceleration) / dt
+
+
 def analyze_movement(coordinates, chair_location):
     """
-    Analyzes and visualizes the movement in X, Y, and Z coordinates.
-
-    This function calculates and plots the location, velocity, and acceleration for each
-    of the X, Y, and Z coordinates. It plots these values in separate figures.
-    Chair location boundaries are marked in the X and Y coordinate plots.
+    Analyzes and visualizes the movement in X, Y, and Z coordinates including
+    location, velocity, acceleration, and jerk.
 
     Parameters:
     coordinates (dict): A dictionary containing lists of 'x', 'y', and 'z' coordinate values.
@@ -17,51 +30,53 @@ def analyze_movement(coordinates, chair_location):
     Returns:
     None
     """
-    # Extract coordinates and calculate velocity and acceleration
-    x_values, y_values, z_values = coordinates.get('x', []), coordinates.get('y', []), coordinates.get('z', [])
     dt = DATA_PROVIDED_TIME
+    x_values, y_values, z_values = (coordinates.get(key) for key in ['x', 'y', 'z'])
 
     # Function to calculate velocity and acceleration
     def calculate_velocity_acceleration(values):
-        velocity = [(values[i + 1] - values[i]) / dt for i in range(len(values) - 1)]
-        acceleration = [(velocity[i + 1] - velocity[i]) / dt for i in range(len(velocity) - 1)]
-        return velocity, acceleration
+        velocity = np.diff(values) / dt
+        acceleration = np.diff(velocity) / dt
+        return velocity.tolist(), acceleration.tolist()
 
     # Calculating for each coordinate
     vx, ax = calculate_velocity_acceleration(x_values)
     vy, ay = calculate_velocity_acceleration(y_values)
     vz, az = calculate_velocity_acceleration(z_values)
 
-    # Chair location ranges
-    chair_x_range = chair_location.get('x', [])
-    chair_y_range = chair_location.get('y', [])
+    # Calculating jerk for each coordinate
+    jx = calculate_jerk(ax, dt)
+    jy = calculate_jerk(ay, dt)
+    jz = calculate_jerk(az, dt)
 
-    # Function to plot each coordinate
-    def plot_coordinate_analysis(values, velocity, acceleration, chair_range, coord_label):
+    # Plotting for X, Y, and Z
+    for i, (values, velocity, acceleration, jerk, coord_label) in enumerate(zip(
+            (x_values, y_values, z_values),
+            (vx, vy, vz),
+            (ax, ay, az),
+            (jx, jy, jz),
+            ('X', 'Y', 'Z'))):
         plt.figure(figsize=(12, 8))
 
-        # Location
-        plt.subplot(3, 1, 1)
-        plt.plot(values, label=f'{coord_label} Coordinate')
+        # Location plot
+        plt.subplot(4, 1, 1)
+        plt.plot(values[:-2], label=f'{coord_label} Coordinate')  # Exclude the last 2 points for matching dimensions
         plt.title(f'{coord_label} Coordinate')
         plt.xlabel('Frame')
         plt.ylabel(coord_label)
-        if coord_label in ['X', 'Y']:
-            plt.axhline(y=chair_range[0], color='r', linestyle='--', label=f'Chair {coord_label} Lower Bound')
-            plt.axhline(y=chair_range[1], color='g', linestyle='--', label=f'Chair {coord_label} Upper Bound')
         plt.legend()
 
-        # Velocity
-        plt.subplot(3, 1, 2)
-        plt.plot(velocity, label=f'{coord_label} Velocity')
+        # Velocity plot
+        plt.subplot(4, 1, 2)
+        plt.plot(velocity[:-1], label=f'{coord_label} Velocity')  # Exclude the last point for matching dimensions
         plt.title(f'{coord_label} Velocity')
         plt.xlabel('Frame')
         plt.ylabel('Velocity (m/s)')
         plt.axhline(y=0, color='b', linestyle='--', label='Zero Velocity')
         plt.legend()
 
-        # Acceleration
-        plt.subplot(3, 1, 3)
+        # Acceleration plot
+        plt.subplot(4, 1, 3)
         plt.plot(acceleration, label=f'{coord_label} Acceleration')
         plt.title(f'{coord_label} Acceleration')
         plt.xlabel('Frame')
@@ -69,10 +84,14 @@ def analyze_movement(coordinates, chair_location):
         plt.axhline(y=0, color='b', linestyle='--', label='Zero Acceleration')
         plt.legend()
 
+        # Jerk plot
+        plt.subplot(4, 1, 4)
+        plt.plot(jerk, label=f'{coord_label} Jerk')
+        plt.title(f'{coord_label} Jerk')
+        plt.xlabel('Frame')
+        plt.ylabel('Jerk (m/s^3)')
+        plt.axhline(y=0, color='b', linestyle='--', label='Zero Jerk')
+        plt.legend()
+
         plt.tight_layout()
         plt.show()
-
-    # Plotting for X, Y, and Z
-    plot_coordinate_analysis(x_values, vx, ax, chair_x_range, 'X')
-    plot_coordinate_analysis(y_values, vy, ay, chair_y_range, 'Y')
-    plot_coordinate_analysis(z_values, vz, az, [], 'Z')
