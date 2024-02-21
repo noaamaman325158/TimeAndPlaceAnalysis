@@ -1,0 +1,7 @@
+README.md
+setup.py
+VayyarHomeTaskNoaaMaman.egg-info/PKG-INFO
+VayyarHomeTaskNoaaMaman.egg-info/SOURCES.txt
+VayyarHomeTaskNoaaMaman.egg-info/dependency_links.txt
+VayyarHomeTaskNoaaMaman.egg-info/entry_points.txt
+VayyarHomeTaskNoaaMaman.egg-info/top_level.txt

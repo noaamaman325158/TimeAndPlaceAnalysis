@@ -66,9 +66,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 
 ## Analysis And Visualization
-** X Coordinate Analysis **
+### X Coordinate Analysis 
 ![img.png](img.png)
 
 
 ### Y Coordinate Analysis 
+![img_1.png](img_1.png)
+
+
 ### Z Coordinate Analysis 

@@ -1,0 +1,2 @@
+[console_scripts]
+VayyarHomeTaskNoaaMaman_main = main:main
