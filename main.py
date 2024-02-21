@@ -1,8 +1,9 @@
 import datetime
 import json
-import re
 import requests
 
+from Utils.data_operations import parse_log_file, extract_coordinates
+from Utils.data_visulization_utils import analyze_movement
 from constants import API_URI, PATH_LOG_FILE, DATA_PROVIDED_TIME, FRAME, FPS, TARGETS, END_OF_FRAME, X, Y
 
 
@@ -80,48 +81,12 @@ def calculate_total_time_in_chair_surface(log_data, chair_location):
     return total_time_duration
 
 
-def parse_log_file(file_path):
-    measurements = []
-
-    # Regular expressions to extract relevant data
-    frame_pattern = re.compile(r'Process frame without interrupt: (\d+)')
-    fps_pattern = re.compile(r'\[FPS\] Average last 1 frame FPS=(\d+\.\d+)')
-    target_pattern = re.compile(r'Targets: (\d+)')
-    target_data_pattern = re.compile(r't_id=(\d+) x=([+-]\d+\.\d+) y=([+-]\d+\.\d+) z=([+-]\d+\.\d+)')
-
-    with open(file_path, 'r') as file:
-        measurement = {}
-
-        for line in file:
-            frame_match = frame_pattern.search(line)
-            fps_match = fps_pattern.search(line)
-            target_match = target_pattern.search(line)
-            target_data_match = target_data_pattern.search(line)
-
-            if frame_match:
-                measurement = {FRAME: int(frame_match.group(1))}
-            elif fps_match:
-                measurement[FPS] = float(fps_match.group(1))
-            elif target_match:
-                measurement[TARGETS] = int(target_match.group(1))
-            elif target_data_match:
-                t_id = int(target_data_match.group(1))
-                x = float(target_data_match.group(2))
-                y = float(target_data_match.group(3))
-                z = float(target_data_match.group(4))
-                measurement[f'target_{t_id}_data'] = {'x': x, 'y': y, 'z': z}
-            elif END_OF_FRAME in line:
-                # End of a measurement, append to the list
-                measurements.append(measurement)
-
-    return measurements
-
-
 def main():
     log_file_measurement = parse_log_file(PATH_LOG_FILE)
 
     current_location_range_json = get_current_chair_location()
 
+    current_location_range_dict_str, current_location_range_dict = None, None
     if current_location_range_json is not None:
         current_location_range_dict_str = json.dumps(current_location_range_json)
         current_location_range_dict = json.loads(current_location_range_dict_str)
@@ -130,6 +95,9 @@ def main():
         print(f'Total time in chair surface: {total_time_in_range_loc}')
     else:
         print("Error: Failed to retrieve chair location.")
+
+    x_y = extract_coordinates(log_file_measurement)
+    analyze_movement(x_y, current_location_range_dict)
 
 
 if __name__ == '__main__':
