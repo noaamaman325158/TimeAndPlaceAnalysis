@@ -51,7 +51,6 @@ This repository contains Python code for calculating the duration of sitting bas
 ## API Documentation
 
 - The sensor API provides endpoints for retrieving data related to a person's movement in the room.
-- Detailed API documentation can be found [here](#) (replace # with the actual link to your documentation).
 
 ## Calculating Sitting Duration
 
@@ -64,3 +63,7 @@ If you would like to contribute to this project, please follow the guidelines in
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+
+## Analysis And Visualization
+![img.png](img.png)

@@ -1,0 +1,2 @@
+[console_scripts]
+total_time_detection_main = main:main

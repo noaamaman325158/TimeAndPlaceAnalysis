@@ -1,0 +1,2 @@
+[console_scripts]
+fall_detection_main = your_package_name.main_program:main

@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from flask_socketio import SocketIO
 
+# More suitable for Real Time System
 app = Flask(__name__)
 socketio = SocketIO(app)
 

@@ -4,11 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="change the project structure and add some .gitignore ffle.">
-      <change afterPath="$PROJECT_DIR$/Utils/data_operations.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utils/data_visulization_utils.py" afterDir="false" />
+    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="Add some matlab visualization utils and change the structure of the project.">
+      <change afterPath="$PROJECT_DIR$/dist/total_time_based_area_project-0.1.tar.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/total_time_based_area_project.egg-info/PKG-INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/total_time_based_area_project.egg-info/SOURCES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/total_time_based_area_project.egg-info/dependency_links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/total_time_based_area_project.egg-info/entry_points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/total_time_based_area_project.egg-info/requires.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/total_time_based_area_project.egg-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/total_time_detection_project.egg-info/PKG-INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/total_time_detection_project.egg-info/SOURCES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/total_time_detection_project.egg-info/dependency_links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/total_time_detection_project.egg-info/entry_points.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/total_time_detection_project.egg-info/top_level.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/data_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/data_operations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/data_visulization_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/data_visulization_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mock_sensor_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mock_sensor_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mock_sensor_api_socket.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mock_sensor_api_socket.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,9 +58,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Python.main.executor": "Debug",
+    "Python.main.executor": "Run",
     "Python.mock_sensor_api.executor": "Run",
-    "Python.tests.executor": "Run",
+    "Python.setup.executor": "Run",
+    "Python.tests.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -150,7 +168,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708461733166</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Add some matlab visualization utils and change the structure of the project.">
+      <option name="closed" value="true" />
+      <created>1708506864713</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708506864713</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -163,15 +189,16 @@
     <MESSAGE value="Add some another api for real time system using web socket." />
     <MESSAGE value="generate some .sh file for auxiliary process that set up the docker con container" />
     <MESSAGE value="change the project structure and add some .gitignore ffle." />
-    <option name="LAST_COMMIT_MESSAGE" value="change the project structure and add some .gitignore ffle." />
+    <MESSAGE value="Add some matlab visualization utils and change the structure of the project." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some matlab visualization utils and change the structure of the project." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>233</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/app/mock_sensor_api.py</url>
+          <line>12</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

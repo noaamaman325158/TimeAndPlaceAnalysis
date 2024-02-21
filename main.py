@@ -2,12 +2,18 @@ import datetime
 import json
 import requests
 
-from Utils.data_operations import parse_log_file, extract_coordinates
+from Utils.data_operations import parse_log_file, extract_coordinates, wrapper_get_dataframe_from_log
 from Utils.data_visulization_utils import analyze_movement
 from constants import API_URI, PATH_LOG_FILE, DATA_PROVIDED_TIME, FRAME, FPS, TARGETS, END_OF_FRAME, X, Y
 
 
 def point_in_range(location, point):
+    """
+
+    :param location:
+    :param point:
+    :return:
+    """
     x_lower_bound, x_upper_bound = location[X][0], location[X][1]
     y_lower_bound, y_upper_bound = location[Y][0], location[Y][1]
 
@@ -41,6 +47,11 @@ def get_current_chair_location():
 
 
 def parse_log_entry(log_entry):
+    """
+
+    :param log_entry:
+    :return:
+    """
     entry_data = {}
     parts = log_entry.split()
 
@@ -59,6 +70,12 @@ def parse_log_entry(log_entry):
 
 
 def calculate_total_time_in_chair_surface(log_data, chair_location):
+    """
+
+    :param log_data:
+    :param chair_location:
+    :return:
+    """
     total_time_duration = datetime.timedelta()
     prev_frame_number = None
 
@@ -96,6 +113,7 @@ def main():
     else:
         print("Error: Failed to retrieve chair location.")
 
+    # Analyzing and visualizing the data
     x_y = extract_coordinates(log_file_measurement)
     analyze_movement(x_y, current_location_range_dict)
 

@@ -1,0 +1,7 @@
+README.md
+setup.py
+total_time_detection_project.egg-info/PKG-INFO
+total_time_detection_project.egg-info/SOURCES.txt
+total_time_detection_project.egg-info/dependency_links.txt
+total_time_detection_project.egg-info/entry_points.txt
+total_time_detection_project.egg-info/top_level.txt
