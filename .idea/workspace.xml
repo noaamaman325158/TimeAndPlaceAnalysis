@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="Add some Y coordinate observation via the README">
-      <change afterPath="$PROJECT_DIR$/img_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utils/data_operations.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/data_operations.py" afterDir="false" />
-    </list>
+    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="Add some Z Visualization Coordinate to the README file." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,7 +188,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708527327895</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add some Z Visualization Coordinate to the README file.">
+      <option name="closed" value="true" />
+      <created>1708528072939</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1708528072939</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -209,7 +212,8 @@
     <MESSAGE value="Add some matlab visualization utils and change the structure of the project." />
     <MESSAGE value="Update teh matplotlib method and update the README file" />
     <MESSAGE value="Add some Y coordinate observation via the README" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add some Y coordinate observation via the README" />
+    <MESSAGE value="Add some Z Visualization Coordinate to the README file." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some Z Visualization Coordinate to the README file." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
