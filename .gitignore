@@ -12,7 +12,7 @@ env/
 .idea/
 
 # Log files
-logs/
+src/logs/
 
 # Other generated files
 *.log

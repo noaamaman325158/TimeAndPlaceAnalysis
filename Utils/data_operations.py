@@ -1,4 +1,4 @@
-from constants import FRAME, FPS, TARGETS, END_OF_FRAME
+from src.constants import FRAME, FPS, TARGETS, END_OF_FRAME
 import re
 import pandas as pd
 

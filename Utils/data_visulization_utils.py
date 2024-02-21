@@ -1,4 +1,4 @@
-from constants import DATA_PROVIDED_TIME
+from src.constants import DATA_PROVIDED_TIME
 import matplotlib.pyplot as plt
 
 
