@@ -15,15 +15,17 @@ def extract_coordinates(log_file_measurement):
     Returns:
     dict: A dictionary with two keys, 'x' and 'y', each containing a list of coordinate values.
     """
-    extracted_coordinates = {'x': [], 'y': []}
+    extracted_coordinates = {'x': [], 'y': [], 'z': []}
 
     for measurement in log_file_measurement:
         x_value = measurement.get('target_0_data', {}).get('x', None)
         y_value = measurement.get('target_0_data', {}).get('y', None)
+        z_value = measurement.get('target_0_data', {}).get('z', None)
 
         if x_value is not None and y_value is not None:
             extracted_coordinates['x'].append(x_value)
             extracted_coordinates['y'].append(y_value)
+            extracted_coordinates['z'].append(z_value)
 
     return extracted_coordinates
 
