@@ -72,10 +72,10 @@ This project is licensed under the MIT License. For more information, see the [L
 For a detailed understanding of the sensor data, the application provides visual analyses for each coordinate:
 
 ### X Coordinate Analysis
-![X Coordinate Analysis](img.png "X Coordinate Analysis")
+![X Coordinate Analysis](assets/img.png "X Coordinate Analysis")
 
 ### Y Coordinate Analysis
-![Y Coordinate Analysis](img_1.png "Y Coordinate Analysis")
+![Y Coordinate Analysis](assets/img_1.png "Y Coordinate Analysis")
 
 ### Z Coordinate Analysis
-![Z Coordinate Analysis](img_2.png "Z Coordinate Analysis")
+![Z Coordinate Analysis](assets/img_2.png "Z Coordinate Analysis")
