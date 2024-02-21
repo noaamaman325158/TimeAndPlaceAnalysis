@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="Another change in the project structure">
-      <change afterPath="$PROJECT_DIR$/src/assets/file_name" afterDir="false" />
+    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="Add some jerk measurement.">
+      <change afterPath="$PROJECT_DIR$/img.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/data_visulization_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/data_visulization_utils.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +225,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708537606564</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Add some jerk measurement.">
+      <option name="closed" value="true" />
+      <created>1708540256926</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1708540256926</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -246,7 +253,8 @@
     <MESSAGE value="improve README.md" />
     <MESSAGE value="Start change again the structure of the project" />
     <MESSAGE value="Another change in the project structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Another change in the project structure" />
+    <MESSAGE value="Add some jerk measurement." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add some jerk measurement." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
