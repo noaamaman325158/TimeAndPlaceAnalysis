@@ -74,6 +74,8 @@ For a detailed understanding of the sensor data, the application provides visual
 ### X Coordinate Analysis
 ![img.png](img.png)
 
+The X Coordinate graph indicates periodic movement with intervals of no movement, suggesting that the person or object is moving around the room and occasionally stopping, possibly to sit or stand still. There are no abrupt changes to indicate sudden events like falls.
+
 ### Y Coordinate Analysis
 ![img_1.png](img_1.png)
 
