@@ -6,6 +6,7 @@ from Utils.data_operations import parse_log_file, extract_coordinates, wrapper_g
     save_dataframe_to_csv
 from Utils.data_visulization_utils import analyze_movement
 from constants import API_URI, PATH_LOG_FILE, DATA_PROVIDED_TIME, FRAME, FPS, TARGETS, END_OF_FRAME, X, Y
+from src.Utils.data_preparation import prepare_sensor_data
 
 
 def point_in_range(location, point):
@@ -88,8 +89,8 @@ def calculate_total_time_in_chair_surface(log_data, chair_location):
             for target_id in range(measurement.get('targets', 0)):
                 target_key = f'target_{target_id}_data'
                 if target_key in measurement:
-                    x_value = measurement[target_key]['x']
-                    y_value = measurement[target_key]['y']
+                    x_value = measurement[target_key][X]
+                    y_value = measurement[target_key][Y]
 
                     if is_in_chair_surface((x_value, y_value), chair_location):
                         total_time_duration += time_difference
@@ -97,6 +98,34 @@ def calculate_total_time_in_chair_surface(log_data, chair_location):
         prev_frame_number = frame_number
 
     return total_time_duration
+
+
+def calculate_time_in_chair_df(prepared_data, chair_location):
+    """
+    Calculates the total time a person was detected in the chair area.
+
+    Parameters:
+    prepared_data (DataFrame): The prepared DataFrame with sensor data.
+    chair_location (dict): A dictionary with 'x' and 'y' keys, each containing a range [min, max].
+
+    Returns:
+    float: The total time in seconds that the person was in the chair area.
+    """
+
+    # Filter the DataFrame for rows where the person is within the chair location bounds
+    in_chair_condition = (
+            (prepared_data[X] >= chair_location[X][0]) & (prepared_data[Y] <= chair_location[X][1]) &
+            (prepared_data[Y] >= chair_location[Y][0]) & (prepared_data[Y] <= chair_location[Y][1])
+    )
+    in_chair_data = prepared_data[in_chair_condition]
+
+    # Calculate the time spent in the chair by counting the frames and dividing by the frame rate
+    # Assuming each frame represents an equal interval of time and the fps is constant
+    frames_in_chair = in_chair_data.shape[0]
+    average_fps = prepared_data[FPS].mean()
+    time_in_chair_seconds = frames_in_chair / average_fps
+
+    return time_in_chair_seconds
 
 
 def main():
@@ -118,10 +147,21 @@ def main():
     x_y = extract_coordinates(log_file_measurement)
     analyze_movement(x_y, current_location_range_dict)
 
-    # Generate some csv file
-    # df = wrapper_get_dataframe_from_log(PATH_LOG_FILE)
-    #
-    # save_dataframe_to_csv(df, "assets/sensor_data.csv")
+    # Prepare the Data for Analysis steps
+    after_preparations_df = prepare_sensor_data("assets/sensor_data.csv")
+    print(after_preparations_df)
+    chair_location = {
+
+        'x': [-0.5, 0],
+
+        'y': [1.8, 2.4]
+
+    }
+
+    # Calculate the time in chair using the prepared data and the chair location
+
+    time_in_chair = calculate_time_in_chair_df(after_preparations_df, chair_location)
+    print(time_in_chair)
 
 
 if __name__ == '__main__':

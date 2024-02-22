@@ -4,8 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="Update the visualizations">
+    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="Update the main technologies.">
+      <change afterPath="$PROJECT_DIR$/src/Utils/data_preparation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/mock_sensor_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mock_sensor_api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,21 +41,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.data_operations.executor&quot;: &quot;Run&quot;,
-    &quot;Python.data_visulization_utils.executor&quot;: &quot;Debug&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.mock_sensor_api.executor&quot;: &quot;Run&quot;,
-    &quot;Python.setup.executor&quot;: &quot;Run&quot;,
-    &quot;Python.tests.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/noaa/Desktop/test_llvm_built_in/Visualization/VayyarHomeTaskNoaaMaman/assets&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.data_operations.executor": "Run",
+    "Python.data_visulization_utils.executor": "Debug",
+    "Python.main.executor": "Debug",
+    "Python.mock_sensor_api.executor": "Run",
+    "Python.setup.executor": "Run",
+    "Python.tests.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/noaa/Desktop/test_llvm_built_in/Visualization/VayyarHomeTaskNoaaMaman/assets",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/assets" />
@@ -248,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708606896373</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Update the main technologies.">
+      <option name="closed" value="true" />
+      <created>1708607677210</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1708607677210</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -271,7 +284,8 @@
     <MESSAGE value="Add some jerk measurement." />
     <MESSAGE value="Update pictures of the jerk measurement." />
     <MESSAGE value="Update the visualizations" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update the visualizations" />
+    <MESSAGE value="Update the main technologies." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update the main technologies." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -280,6 +294,11 @@
           <url>file://$PROJECT_DIR$/app/mock_sensor_api.py</url>
           <line>12</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/main.py</url>
+          <line>124</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

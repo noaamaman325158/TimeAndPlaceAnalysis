@@ -12,10 +12,11 @@ It interprets movement within a room to calculating the amount of time spent in 
 - ![Flask](https://img.icons8.com/color/48/000000/flask.png) **Flask Framework**
 - ![Matlab](https://img.icons8.com/fluent/48/000000/matlab.png) **Matlab**
 - ![Pandas](https://img.icons8.com/color/48/000000/pandas.png) **Pandas**
-- ![Numpy](https://numpy.org/images/logos/numpy.svg) **Numpy**
+-  **Numpy**
 - ![RestAPI](https://img.icons8.com/nolan/64/api-settings.png) **RestAPI**
+- ![WebSockets](https://img.shields.io/badge/-WebSockets-010101?style=flat-square&logo=Socket.io&logoColor=white) **Web Socket**
 - ![Getting Started](https://img.icons8.com/color/48/000000/getting-started--v1.png) **Getting Started**
-- ![WebSockets](https://img.shields.io/badge/-WebSockets-010101?style=flat-square&logo=Socket.io&logoColor=white)
+
 
 
 ### Prerequisites

@@ -15,7 +15,7 @@ def get_sensor_location():
     """
     Endpoint to get the sensor's current location.
 
-    This route returns the current hardcoded location of the sensor in the format:
+    This route returns the current  location of the chair in the format:
     {
         'x': [min_x, max_x],
         'y': [min_y, max_y]

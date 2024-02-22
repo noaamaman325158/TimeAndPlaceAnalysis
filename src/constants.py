@@ -8,7 +8,7 @@ TARGETS = 'targets'
 END_OF_FRAME = 'endOfFrame'
 X = 'x'
 Y = 'y'
-
+Z = 'z'
 
 
 
