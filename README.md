@@ -79,5 +79,7 @@ The X Coordinate graph indicates periodic movement with intervals of no movement
 ### Y Coordinate Analysis
 ![img_1.png](img_1.png)
 
+The Y Coordinate graph shows varied and periodic movement along the y-axis, indicating that the person was actively moving forward and backward in the room with occasional pauses.
+
 ### Z Coordinate Analysis
 ![img_2.png](img_2.png)
