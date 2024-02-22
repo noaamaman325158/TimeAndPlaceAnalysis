@@ -2,7 +2,8 @@
 
 ## Overview
 
-This repository hosts the Python application designed to calculate the duration of sitting time, leveraging location sensor data. It interprets movement within a room to discern the amount of time spent in a predefined sitting area.
+This repository hosts the Python system designed to calculate the duration of sitting time, leveraging location sensor data.
+It interprets movement within a room to calculating the amount of time spent in a predefined sitting area.
 
 ## Getting Started
 
@@ -23,9 +24,9 @@ This repository hosts the Python application designed to calculate the duration 
    It's recommended to use a virtual environment for the Python setup.
     ```bash
     python -m venv .venv
-    source .venv/bin/activate  # On Windows, use .venv\Scripts\activate
+    source .venv/bin/activate  
     ```
-
+    On Windows, use .venv\Scripts\activate
 3. **Dependency Installation:**
    Install the required dependencies using pip.
     ```bash
@@ -54,7 +55,7 @@ The API offers several endpoints for accessing the movement data:
 
 - `GET /api/location`: Retrieves the current location data.
 - `GET /api/duration`: Provides the calculated duration of sitting.
-
+There is additional API that based on web socket that designed to deal with system of Real-Time characters.
 ## How It Works
 
 The application processes the sensor data to determine the total duration of sitting. It provides both a command-line interface and a web interface for easy interaction and visualization.
