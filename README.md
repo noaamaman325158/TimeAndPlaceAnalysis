@@ -83,3 +83,5 @@ The Y Coordinate graph shows varied and periodic movement along the y-axis, indi
 
 ### Z Coordinate Analysis
 ![img_2.png](img_2.png)
+
+The Z Coordinate graph suggests regular changes in vertical position, like standing up or sitting down, without extreme movements indicating jumping or falling.
