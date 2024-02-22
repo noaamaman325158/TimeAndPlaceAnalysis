@@ -118,9 +118,10 @@ def main():
     x_y = extract_coordinates(log_file_measurement)
     analyze_movement(x_y, current_location_range_dict)
 
-    df = wrapper_get_dataframe_from_log(PATH_LOG_FILE)
-
-    save_dataframe_to_csv(df, "assets/file_name")
+    # Generate some csv file
+    # df = wrapper_get_dataframe_from_log(PATH_LOG_FILE)
+    #
+    # save_dataframe_to_csv(df, "assets/sensor_data.csv")
 
 
 if __name__ == '__main__':
