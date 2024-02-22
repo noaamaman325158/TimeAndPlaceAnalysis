@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="Implementing the second approach - Data Analysis.">
+    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="Finish ti implement the second approach">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,7 +264,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708609463743</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Finish ti implement the second approach">
+      <option name="closed" value="true" />
+      <created>1708621629756</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1708621629756</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -291,7 +297,8 @@
     <MESSAGE value="Update the visualizations" />
     <MESSAGE value="Update the main technologies." />
     <MESSAGE value="Implementing the second approach - Data Analysis." />
-    <option name="LAST_COMMIT_MESSAGE" value="Implementing the second approach - Data Analysis." />
+    <MESSAGE value="Finish ti implement the second approach" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish ti implement the second approach" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
