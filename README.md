@@ -23,6 +23,10 @@ It interprets movement within a room to calculating the amount of time spent in 
 
 - Docker: Ensure Docker is installed on your system. [Install Docker](https://docs.docker.com/get-docker/).
 
+### Approaches
+In order to solve the given problem I used two different approaches:
+1) Analyze the document and export the information to known data structures
+2) Using techniques from the world of data science for long-term work with the same data to identify movement patterns and even training model.
 ### Setup and Installation
 
 1. **Clone the Repository:**

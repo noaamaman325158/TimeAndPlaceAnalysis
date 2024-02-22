@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="Update the main technologies.">
-      <change afterPath="$PROJECT_DIR$/src/Utils/data_preparation.py" afterDir="false" />
+    <list default="true" id="8840ac25-2d65-4154-a732-a8a992cdf3a2" name="Changes" comment="Implementing the second approach - Data Analysis.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/mock_sensor_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/mock_sensor_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +42,7 @@
   "keyToString": {
     "Python.data_operations.executor": "Run",
     "Python.data_visulization_utils.executor": "Debug",
-    "Python.main.executor": "Debug",
+    "Python.main.executor": "Run",
     "Python.mock_sensor_api.executor": "Run",
     "Python.setup.executor": "Run",
     "Python.tests.executor": "Debug",
@@ -261,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708607677210</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Implementing the second approach - Data Analysis.">
+      <option name="closed" value="true" />
+      <created>1708609463743</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1708609463743</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -285,7 +290,8 @@
     <MESSAGE value="Update pictures of the jerk measurement." />
     <MESSAGE value="Update the visualizations" />
     <MESSAGE value="Update the main technologies." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update the main technologies." />
+    <MESSAGE value="Implementing the second approach - Data Analysis." />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementing the second approach - Data Analysis." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -294,11 +300,6 @@
           <url>file://$PROJECT_DIR$/app/mock_sensor_api.py</url>
           <line>12</line>
           <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/main.py</url>
-          <line>124</line>
-          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
