@@ -51,13 +51,13 @@ In order to solve the given problem I used two different approaches:
 4. **Docker Build:**
    Build the Docker image from the Dockerfile present in the repository.
     ```bash
-    docker build -t sitting_duration_calculator .
+    docker build -t noaa13092/mock_api_sensor .
     ```
 
 5. **Run the Container:**
    Start a Docker container from the image.
     ```bash
-    docker run -p 4000:80 sitting_duration_calculator:latest
+    docker run -p 4000:80 noaa13092/mock_api_sensor
     ```
 
 6. **Access the Application:**
