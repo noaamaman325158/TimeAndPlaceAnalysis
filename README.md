@@ -51,7 +51,7 @@ In order to solve the given problem I used two different approaches:
 4. **Docker Build:**
    Build the Docker image from the Dockerfile present in the repository.
     ```bash
-    docker build -t noaa13092/mock_api_sensor .
+    docker pull noaa13092/mock_api_sensor
     ```
 
 5. **Run the Container:**
